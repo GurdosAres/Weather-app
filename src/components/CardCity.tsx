@@ -60,9 +60,9 @@ export default  function CardCity({Data_}:{Data_:City[]}) {
   },[once])
 
     if(loading){
-      return Data_.map((val)=>{
+      return Data_.map((val,index)=>{
         return (
-          <div className="card" key={val.id} >
+          <div className="card" key={index} >
                <h1>{val.name}</h1>
           </div>
         )

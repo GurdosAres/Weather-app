@@ -70,8 +70,7 @@ export default  function ListOfCities({ searchTerm,setSearch}: Props) {
           setLoading(true)
           setCities([]);
           setState(-1)
-          const { data,metadata:{totalCount}} = await DataApi(searchTerm);
-          setState(curren => curren = totalCount)
+          const  data = await DataApi(searchTerm);
           setCities(current => current = data);
           setLoading(cur => cur = false)
           setNotFound(cur => cur = searchTerm)
@@ -96,8 +95,8 @@ export default  function ListOfCities({ searchTerm,setSearch}: Props) {
   }
  
 
-  return cities.map((result) => (
-    <button className="city" onClick={(e) => {saveCityToCard(result.id,e)}} key={result.id}>
+  return cities.map((result,index) => (
+    <button className="city" key={index + "options"} onClick={(e) => {saveCityToCard(result.id,e)}} >
       {result.name}
     </button>
   ));
