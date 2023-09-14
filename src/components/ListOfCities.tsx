@@ -32,22 +32,13 @@ export default  function ListOfCities({ searchTerm,setSearch}: Props) {
       console.log("was not found")
       return
     }
-    console.log(target)
+
     if(data__){
       const jsData:City[] = data__
-      if(jsData.find((city_) => city_.id === city?.id)){
-        alert("already Is Added!")
-        setCities(cur => cur = [])
-        setSearch("")
-        return
-      }else{
         SetData([...jsData,{id:city?.id,latitude:city?.latitude,longitude:city?.longitude}])
         setCities(curr => curr = [])
         setSearch("")
-        setOnce(0)
-        return 
-      }
-      
+        setOnce(0)   
     }else{
       SetData([{id:city?.id,latitude:city?.latitude,longitude:city?.longitude}])
       setCities(curr => curr = [])

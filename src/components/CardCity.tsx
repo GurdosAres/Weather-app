@@ -15,6 +15,7 @@ enum WeatherOPT {
 export default  function CardCity({Data_}:{Data_:City[]}) {
 
   const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
   const [cities,setCities] = useState<DataWheather[]>([])
   const [loading,setLoading] = useState(false)
   const {once,setOnce} = useContext(AppContext)
@@ -27,8 +28,8 @@ export default  function CardCity({Data_}:{Data_:City[]}) {
       const promises= Data_.map( async (data_) => {
         const params:WheatherParams = {
           OnWhen:WeatherOPT.Current,
-          latitude:data_.latitude.toString(),
-          longitude:data_.longitude.toString(),
+          latitude:data_.latitude.toString().trim(),
+          longitude:data_.longitude.toString().trim(),
         }
         return await  WheatherApi(params)
       })
@@ -110,7 +111,7 @@ export default  function CardCity({Data_}:{Data_:City[]}) {
           </p>
           <p className="minmaxClass"> {<Image className="wind" width={60} height={60} src={visibilityPng.src} alt="Visibility"></Image>}<span className="txt-4rem">Good</span> </p>
         </div>
-        <p className="time_cur"><span> {weekday[new Date(data.location.localtime.slice(8, 10)).getDay()] + " " + data.location.localtime.slice(11)}</span></p>
+        <p className="time_cur"><span> {data.location.localtime.slice(11)}</span></p>
   
       </div>
       )
