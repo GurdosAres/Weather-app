@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 12.00 23.00">
+<path fill="#5e3c47" fill-opacity="0.992" d="
+  M 5.35 1.92
+  Q 5.77 1.08 6.28 1.88
+  C 8.60 5.51 14.90 19.01 9.01 21.84
+  Q 6.55 23.01 3.90 22.16
+  C -3.39 19.80 3.04 6.54 5.35 1.92
+  Z
+  M 5.60 3.75
+  C 3.74 7.46 -2.54 20.88 5.58 21.49
+  C 14.60 22.17 8.59 7.90 6.65 4.14
+  Q 6.38 3.62 5.85 3.60
+  A 0.28 0.28 0.0 0 0 5.60 3.75
+  Z"
+/>
+</svg>
